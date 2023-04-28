@@ -1,18 +1,67 @@
-/* TELA DE LOGIN */
-.container {
-    display: flex; /* setando o flexbox*/ 
-    margin: auto;
+/* INDEX */
+/* BLOCOS */
+:root {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    --main-bg-color: #3DACA4;
+    --snd-bg-color: #EB863F;
+    --main-fnt-color: #ffffff;
+    --header-height: 50px;
+    --container-width: 1000px;
+}
+body {
+    margin: 0;
     padding: 0;
 }
 
-.background {
-    background-color: #fff;
-    flex: 3;
-    padding: 50px;
+header {
+    height: var(--header-height);
+    background-color:var(--main-bg-color);
 }
 
-.login {
-    background-color: #3DACA4;
-    flex: 1;
-    padding: 50px;
+/* #logotipo { float: left;}  necessário para o nav não ficar desalinhado */
+
+.container {
+    width: var(--container-width);
+    margin: auto;
+}
+
+nav {
+    float: right;
+}
+
+nav ul,
+nav li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    padding: 0px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+li a {
+    text-decoration: none;
+    color: var(--main-fnt-color);
+}
+/* ELEMENTOS */
+.header__item {
+    float: left;
+    color: var(--main-fnt-color);
+    font-weight: bold;
+    line-height: var(--header-height);
+}
+
+.a-header__line {
+    background-color: var(--snd-bg-color);
+    height: 5px;
+}
+/* MODIFICADORES */
+nav li:hover {
+	background-color: var(--snd-bg-color);
+    transition: all 0.3s ease-in-out;
+
 }

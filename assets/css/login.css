@@ -1,0 +1,18 @@
+/* TELA DE LOGIN */
+.container {
+    display: flex; /* setando o flexbox*/ 
+    margin: auto;
+    padding: 0;
+}
+
+.background {
+    background-color: #fff;
+    flex: 3;
+    padding: 50px;
+}
+
+.login {
+    background-color: #3DACA4;
+    flex: 1;
+    padding: 50px;
+}

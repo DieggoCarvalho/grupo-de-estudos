@@ -1,0 +1,21 @@
+BASE DE CONHECIMENTO
+
+'Cadastro'
+-ASSUNTO
+-TAGS
+-DESCRIÇÃO
+'Pesquisar'
+-TAGS
+-ASSUNTO
+-DESCRIÇÃO
+
+TO DO:
+
+Perfil GitHub
+https://www.youtube.com/watch?v=TsaLQAetPLU&list=WL
+
+Base de Conhecimento
+
+Site Portfólio
+
+Desenvolvimento

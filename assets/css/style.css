@@ -1,10 +1,11 @@
 /* INDEX */
-/* BLOCOS */
+/* ================================== BLOCOS ================================== */
 :root {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     --main-bg-color: #3DACA4;
     --snd-bg-color: #EB863F;
+    --trd-bg-color:  #fefefe;
     --main-fnt-color: #ffffff;
     --header-height: 50px;
     --container-width: 1000px;
@@ -47,7 +48,23 @@ li a {
     text-decoration: none;
     color: var(--main-fnt-color);
 }
-/* ELEMENTOS */
+
+#banner {
+    background-color: var(--trd-bg-color);
+    height: 300px;
+}
+
+.b-left {
+    float: left;
+}
+
+.b-right {
+    float: right;
+}
+
+/* ================================== ELEMENTOS ================================== */
+
+/* header */
 .header__item {
     float: left;
     color: var(--main-fnt-color);
@@ -59,9 +76,57 @@ li a {
     background-color: var(--snd-bg-color);
     height: 5px;
 }
-/* MODIFICADORES */
+
+/* banner */
+.banner__item img {
+    height: 300px;
+    transform: scaleX(-1);
+    margin-right: 55px;
+}
+
+.banner__frase1 {
+    font-size: 2.5rem;
+    color: var(--main-bg-color);
+    font-weight: 600;
+}
+.banner__frase2 {
+    font-size: 1.5rem;
+    color: var(--main-bg-color);
+    font-weight: 600;
+}
+
+.banner__btn {
+    background-color: var(--snd-bg-color);
+    color: var(--main-fnt-color);
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight: 600;
+    height: 60px;
+    width: 260px;
+    margin-top: 15px;
+    /* cursor: pointer; */
+    border-radius: 5px;
+}
+
+.banner__item.b-left {
+    margin-top: 60px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px; */
+}
+
+/* ================================== MODIFICADORES ================================== */
 nav li:hover {
 	background-color: var(--snd-bg-color);
     transition: all 0.3s ease-in-out;
 
+}
+.banner__btn:hover,
+.banner__btn:active {
+    transition: all 0.2s linear;
+    cursor: pointer;
+    color: var(--snd-bg-color);
+    background-color: var(--main-fnt-color);
+    border: 2.5px solid var(--snd-bg-color);
 }

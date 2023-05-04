@@ -8,9 +8,10 @@
     --trd-bg-color:  #fefefe;
     --main-fnt-color: #ffffff;
     --header-height: 50px;
-    --container-width: 1000px;
+    --container-width: 900px;
 }
-body {
+body, 
+footer p {
     margin: 0;
     padding: 0;
 }
@@ -62,6 +63,39 @@ li a {
     float: right;
 }
 
+.logo {
+    float: left;
+    display: table;
+    font-size: .6rem;
+    cursor: pointer;
+}
+#logotipo {
+    /* line-height: var(--header-height); */
+    color: var(--main-fnt-color);
+}
+
+.content {
+    background-color: var(--main-bg-color);
+}
+
+.content h1 {
+    height: calc(var(--header-height)*2);
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: calc(var(--header-height)*2);
+    margin: 0 auto;
+    clear: both; /*conseguir centralizar o h1 após remover os margins*/ 
+    color: var(--main-fnt-color);
+ }
+
+footer {
+    text-align: center;
+    height: var(--header-height);
+    background-color: var(--snd-bg-color);
+    line-height: var(--header-height);
+    color: var(--main-fnt-color);
+    font-weight: bold;
+}
 /* ================================== ELEMENTOS ================================== */
 
 /* header */
@@ -71,6 +105,15 @@ li a {
     font-weight: bold;
     line-height: var(--header-height);
 }
+.header__logo {
+	display: table-cell;
+    float: left;
+}
+
+.header__img {
+    height: var(--header-height);
+}
+
 
 .a-header__line {
     background-color: var(--snd-bg-color);
@@ -101,11 +144,13 @@ li a {
     font-size: 1.5rem;
     font-family: Arial, Helvetica, sans-serif; 
     font-weight: 600;
-    height: 60px;
+    height: 50px;
     width: 260px;
     margin-top: 15px;
     /* cursor: pointer; */
     border-radius: 5px;
+    border: none;
+    letter-spacing: 1px;
 }
 
 .banner__item.b-left {
@@ -114,6 +159,43 @@ li a {
     flex-direction: column;
     justify-content: center;
     height: 300px; */
+}
+
+.content__img {
+    background-image: url(../img/page.png);
+    display: inline-block; /* para setar altura e largura */
+    height: calc(var(--header-height)*5);
+    width: calc(var(--header-height)*5);
+    background-position: center;
+    background-size: 95%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin: 0px 10px 40px 10px;
+    position: relative;
+}
+
+.content__img div {
+    display: none; /* ocultar */
+    position: absolute;
+    bottom: 0;
+	right: 0;
+    width: 100%;
+    height: calc(var(--header-height)*1.5);
+    transition: all .5s ease-in-out; 
+	font-size: 1.3rem;
+}
+
+.content__img div a {
+	text-decoration: none;
+	color: #000000;
+    position: absolute;
+    bottom: 0;
+	right: 0;
+    width: 100%;
+    height: 100%;
+    line-height: calc(var(--header-height)*1.5);
+    text-align: center;
+    font-weight: bolder;
 }
 
 /* ================================== MODIFICADORES ================================== */
@@ -129,4 +211,19 @@ nav li:hover {
     color: var(--snd-bg-color);
     background-color: var(--main-fnt-color);
     border: 2.5px solid var(--snd-bg-color);
+}
+
+#content--img1 {
+    background-color: #FDE599;
+}
+#content--img2 {
+    background-color: var(--snd-bg-color);
+}
+#content--img3 {
+    background-color: #9AE1D1;
+}
+
+.content__img:hover div {
+	display: inline-block;
+	background-color: rgba(255, 255, 255, 0.7);
 }
